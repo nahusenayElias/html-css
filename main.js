@@ -1,19 +1,26 @@
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('myLinks');
 
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopBtn.style.display = "block";
+function myFunction() {
+  const links = document.getElementById("myLinks");
+  if (links.style.display === "block") {
+      links.style.display = "none";  // Hide menu
   } else {
-    scrollToTopBtn.style.display = "none";
+      links.style.display = "block"; // Show menu
   }
 }
 
+document.getElementById('menu-icon').addEventListener('click', myFunction);
 
-scrollToTopBtn.addEventListener("click", function() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-});

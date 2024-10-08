@@ -1,42 +1,69 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: #333; /* Dark background for contrast */
+  z-index: 1000;
+  width: 100%;
+  padding: 15px 0;
+}
+
+/* Styling the container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-display: inline-block;
-margin-left: 20px; 
-display: inline-block;
-justify-content: space-between;
-flex: 3;
-padding: 6px 9px; 
-font-size: larger;
-background: #333333;
-margin-left: 20px; 
-position: relative;
-margin: 0 1px;
-text-decoration: none;
-color: #fff;
-transition: 0.6s;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #f5efef;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: orange;
+}
+
+nav ul li a:active {
+  color: orange;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+
 .gallery {
     margin: 0 0rem;
-    margin-top: 25px;
+    margin-top: 5px;
     justify-self: center;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
-    
-    
+  
+
+
 }
 img {
     width: 100%;
@@ -55,7 +82,7 @@ img {
 @media (min-width: 640px) {
     .gallery{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 300px);
     grid-auto-rows: row dense;
     }
@@ -69,10 +96,10 @@ img {
     .grid-item:nth-child(2) {
         grid-column: span 2 / 3;
         grid-row: span 2;
-    .grid-item:nth-child(6),   
+    .grid-item:nth-child(6),
     .grid-item:nth-child(8)  {
         grid-row: span 2;
-    } 
+    }
 
 }
 @media(min-width:960px) {
@@ -89,15 +116,15 @@ img {
         grid-column: span 2;
         grid-row: span 2;
     }
-    
+
 }
 }
 .contact{
-    padding-top: 10px;;
+    padding-top: 2px;;
     background-color: #242e25;
     position: relative;
     max-width: 100%;
-} 
+}
 .contact-box {
     position: relative;
     background-color: #242e25;
@@ -107,20 +134,20 @@ img {
     width: 450px;
     margin: 10px auto;
   }
-  
+
   .contact-box h2 {
     margin-top: 0;
   }
-  
+
   .form-group {
     margin-bottom: 21px;
   }
-  
+
   .form-group label {
     display: block;
     margin-bottom: 1px;
   }
-  
+
   input[type="email"],
   input[type="text"],
   textarea {
@@ -129,11 +156,11 @@ img {
     border: none;
     border-radius: 5px;
   }
-  
+
   textarea {
     height: 200px;
   }
-  
+
   button {
     background-color: orangered;
     color: white;
@@ -142,7 +169,7 @@ img {
     padding: 10px 20px;
     cursor: pointer;
   }
-  
+
   button:hover {
     background-color: rgb(170, 154, 148);
   } */
